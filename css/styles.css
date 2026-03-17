@@ -1,9 +1,3 @@
-/*
-  NOTE: This CSS file is intentionally placed in a non-standard folder name.
-  The assessment expects students to reorganize into a clean structure (e.g., css/styles.css)
-  and fix all related paths.
-*/
-
 :root {
   --bg: #fafafa;
   --card-bg: #fff;
@@ -18,13 +12,7 @@
 
 body {
   margin: 0;
-  font-family:
-    system-ui,
-    -apple-system,
-    Segoe UI,
-    Roboto,
-    Arial,
-    sans-serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.5;
@@ -52,10 +40,11 @@ body {
   font-size: 20px;
 }
 
+/* NAVBAR FLEXBOX */
 .site-nav {
   display: flex;
-  gap: 12px;
-  margin-top: 10px;
+  gap: 16px;
+  align-items: center;
 }
 
 .site-nav a {
@@ -117,8 +106,7 @@ body {
   cursor: pointer;
 }
 
-/* Portfolio-style homepage layout */
-
+/* HERO GRID */
 .hero {
   overflow: hidden;
 }
@@ -179,19 +167,16 @@ body {
   border-radius: 10px;
 }
 
+/* PROJECT GRID FLEXBOX */
 .project-grid {
-  display: grid;
-  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
   margin-top: 12px;
 }
 
-@media (min-width: 800px) {
-  .project-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .project {
+  flex: 1 1 250px; /* responsive width */
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 12px;
